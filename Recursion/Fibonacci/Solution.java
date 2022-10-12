@@ -1,5 +1,3 @@
-package com.passbook.sparkeighteen.recursion;
-
 public class Solution {
 
     public static Integer fibonacci(Integer index) {

@@ -1,5 +1,3 @@
-package com.passbook.sparkeighteen.recursion;
-
 public class Summation {
 
     public static Integer summationNaturalNumbers(Integer number) {
