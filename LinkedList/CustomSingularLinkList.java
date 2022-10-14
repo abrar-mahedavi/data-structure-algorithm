@@ -17,4 +17,17 @@ public class CustomSingularLinkList {
     }
   }
 
+  public void addNode(int data) {
+    if (null == head) {
+      head = new Node(data);
+    } else {
+      Node temp = head;
+      while (temp.next != null) {
+        temp = temp.next;
+      }
+      Node newNode = new Node(data);
+      temp.next = newNode;
+    }
+  }
+
 }
