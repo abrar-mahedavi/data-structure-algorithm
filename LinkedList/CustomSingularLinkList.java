@@ -30,4 +30,12 @@ public class CustomSingularLinkList {
     }
   }
 
+  public void printData() {
+    Node temp = this.head;
+    while (temp != null) {
+      System.out.println(temp.data);
+      temp = temp.next;
+    }
+  }
+
 }
