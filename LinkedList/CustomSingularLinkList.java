@@ -38,4 +38,12 @@ public class CustomSingularLinkList {
     }
   }
 
+  public static void main(String[] args) {
+    CustomSingularLinkList customSingularLinkList = new CustomSingularLinkList();
+    customSingularLinkList.addNode(1);
+    customSingularLinkList.addNode(2);
+    customSingularLinkList.addNode(3);
+    customSingularLinkList.printData();
+  }
+
 }
