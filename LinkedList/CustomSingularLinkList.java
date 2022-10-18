@@ -40,6 +40,19 @@ public class CustomSingularLinkList {
     }
   }
 
+  public void addNodeAtLast(int data) {
+    if (null == head) {
+      head = new Node(data);
+    } else {
+      Node temp = head;
+      while (temp.next != null) {
+        temp = temp.next;
+      }
+      Node newNode = new Node(data);
+      temp.next = newNode;
+    }
+  }
+
   public void printData() {
     Node temp = this.head;
     while (temp != null) {
