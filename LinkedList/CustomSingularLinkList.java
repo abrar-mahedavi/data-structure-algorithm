@@ -53,6 +53,22 @@ public class CustomSingularLinkList {
     }
   }
 
+  public void addNodeAtIndex(int index,int data) {
+    int count = 1;
+    if (null == head && count <= index) {
+      head = new Node(data);
+    } else {
+      Node temp = head;
+      while (temp.next != null && count < index) {
+        temp = temp.next;
+        count++;
+      }
+      Node newNode = new Node(data);
+      newNode.next= temp.next;
+      temp.next = newNode;
+    }
+  }
+
   public void printData() {
     Node temp = this.head;
     while (temp != null) {
