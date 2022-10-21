@@ -78,6 +78,18 @@ public class CustomSingularLinkList {
     }
   }
 
+  public void removeLastNode() {
+    if (null == head) {
+      System.out.println("No nodes can't remove anything");
+    } else {
+      Node temp = head;
+      while (temp.next.next != null) {
+        temp = temp.next;
+      }
+      temp.next = null;
+    }
+  }
+
   public void printData() {
     Node temp = this.head;
     while (temp != null) {
