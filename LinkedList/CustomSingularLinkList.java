@@ -1,6 +1,7 @@
 public class CustomSingularLinkList {
 
   private Node head;
+  private int size;
 
   public class Node {
 
@@ -19,7 +20,8 @@ public class CustomSingularLinkList {
 
   public void addNode(int data) {
     if (null == head) {
-      head = new Node(data);
+      this.head = new Node(data);
+      this.size = 1;
     } else {
       Node temp = head;
       while (temp.next != null) {
@@ -27,22 +29,26 @@ public class CustomSingularLinkList {
       }
       Node newNode = new Node(data);
       temp.next = newNode;
+      this.size++;
     }
   }
 
   public void addNodeAtFirst(int data) {
     if (null == head) {
       head = new Node(data);
+      this.size = 1;
     } else {
       Node newNode = new Node(data);
       newNode.next = head;
       head = newNode;
+      this.size++;
     }
   }
 
   public void addNodeAtLast(int data) {
     if (null == head) {
       head = new Node(data);
+      this.size = 1;
     } else {
       Node temp = head;
       while (temp.next != null) {
@@ -50,13 +56,15 @@ public class CustomSingularLinkList {
       }
       Node newNode = new Node(data);
       temp.next = newNode;
+      this.size++;
     }
   }
 
-  public void addNodeAtIndex(int index,int data) {
+  public void addNodeAtIndex(int index, int data) {
     int count = 1;
     if (null == head && count <= index) {
       head = new Node(data);
+      this.size = 1;
     } else {
       Node temp = head;
       while (temp.next != null && count < index) {
@@ -64,8 +72,9 @@ public class CustomSingularLinkList {
         count++;
       }
       Node newNode = new Node(data);
-      newNode.next= temp.next;
+      newNode.next = temp.next;
       temp.next = newNode;
+      this.size++;
     }
   }
 
@@ -75,6 +84,7 @@ public class CustomSingularLinkList {
     } else {
       Node temp = head;
       head = temp.next;
+      this.size--;
     }
   }
 
@@ -87,7 +97,12 @@ public class CustomSingularLinkList {
         temp = temp.next;
       }
       temp.next = null;
+      this.size--;
     }
+  }
+
+  public int size() {
+    return this.size;
   }
 
   public void printData() {
