@@ -113,12 +113,19 @@ public class CustomSingularLinkList {
     }
   }
 
+
   public static void main(String[] args) {
     CustomSingularLinkList customSingularLinkList = new CustomSingularLinkList();
     customSingularLinkList.addNode(1);
     customSingularLinkList.addNode(2);
     customSingularLinkList.addNode(3);
+    customSingularLinkList.addNodeAtFirst(0);
+    customSingularLinkList.addNodeAtLast(4);
+    customSingularLinkList.addNodeAtIndex(2, 8);
+    customSingularLinkList.addNodeAtIndex(25, 9);
+    customSingularLinkList.removeFirstNode();
+    customSingularLinkList.removeLastNode();
     customSingularLinkList.printData();
+    System.out.println("Size is " + customSingularLinkList.size());
   }
-
 }
